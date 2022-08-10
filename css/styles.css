@@ -64,6 +64,7 @@ body {
 .header-nav {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .header-logo {
@@ -101,13 +102,39 @@ body {
     line-height: 1.1;
     letter-spacing: 0.02em;
     color: var(--main-title-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    
 }
 
 
 
+.current {
+    position: relative;
+    color: var(--btn-link-color);  
+   }  
+
+   .current::after {
+    position: absolute;
+     left: 0;
+     bottom: -2px;
+     content: '';
+     width: 100%;
+     height: 4px;
+     border-radius: 2px;
+    background-color: var(--btn-link-color);
+
+   }
+
+
 .header-link:hover,
 .header-link:focus {
-    color: #2196F3;
+    color: var(--btn-link-color);
+
+}
+
+.current:active {
+    color: var(--btn-link-color);
 }
 
 .header-mail-icon {
@@ -126,15 +153,19 @@ body {
     line-height: 1.1;
     letter-spacing: 0.02em;
     color: var(--secondary-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .header-tel:hover,
 .header-tel:focus {
     color: var(--btn-link-color);
+    
 }
 
 .header-mail:hover,
 .header-mail:focus {
     color: var(--btn-link-color);
+    
 }
 /*--------------Hero--------------*/
 .hero {
@@ -175,15 +206,18 @@ body {
     line-height: 1.9;
     letter-spacing: 0.06em;
     color: #FFFFFF;
-    background: var(--btn-link-color);
+    background-color: var(--btn-link-color);
     border: transparent;
     border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
 .hero-btn:hover, 
 .hero-btn:focus {
     background-color: #188CE8;
+    
+
 }
 
 /*--------------Преимущества-------------*/ 
@@ -347,6 +381,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-icon {
@@ -356,12 +391,15 @@ body {
 .team-soc-link:hover, 
 .team-soc-link:focus {
     background-color: var(--btn-link-color);
+    
 }
 
 .team-soc-link:hover .team-soc-icon, 
 .team-soc-link:focus .team-soc-icon {
     fill: #fff;
+    
 }
+
 /*--------------Client-------------*/
 
 
@@ -392,6 +430,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #AFB1B8;
+    transition: border-color  250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 
@@ -403,6 +442,7 @@ body {
 .clients-link:focus {
     border-color: var(--btn-link-color);
     color: var(--btn-link-color);
+    transform: border-color color;
 }
 
 
@@ -442,6 +482,7 @@ body {
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: #FFFFFF;
+    transition: color  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -456,6 +497,7 @@ body {
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+    transition: color  250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-map:hover,
 .footer-map:focus {
@@ -501,6 +543,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-soc-icon {
@@ -541,6 +584,7 @@ body {
     
     border-radius: 4px;
     cursor: pointer;
+    transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*-------------Portfolio open-------------*/ 
@@ -555,7 +599,7 @@ body {
 .portfolio-btn:hover,
 .portfolio-btn:focus {
     color:#FFFFFF;
-    background: #2196F3;
+    background-color: #2196F3;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
@@ -596,6 +640,11 @@ body {
     padding: 20px 24px;
 
 }
+
+.portfolio-item-open {
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 
 .portfolio-item-open:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
