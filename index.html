@@ -29,7 +29,7 @@
                     <use href="./img/icons.svg#icon-mail"></use>
                 </svg>info@devstudio.com</a></li>
             <li class="header-item-contact"><a href="tel:+380961111111" class="header-tel link">
-                <svg class="header-mail-icon" width="10" height="16">
+                <svg class="header-tel-icon" width="10" height="16">
                     <use href="./img/icons.svg#icon-tel"></use>
                 </svg>+38 096 111 11 11</a></li>      
         </ul>
@@ -43,7 +43,7 @@
             <div class="container">
                 
             <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-            <button type="button" class="hero-btn">Замовити послугу</button>
+            <button type="button" class="hero-btn" data-modal-open>Замовити послугу</button>
             </div>
             
         </section>
@@ -100,12 +100,15 @@
             <ul class="work-list list">
                 <li class="work-item">
                    <img class="work-img" src="./img/box1.jpg" alt="работа за компьютером" width="370" height="294">
+                    <p class="work-text">Десктопні додатки</p>
                 </li> 
-                <li>
+                <li class="work-item">
                     <img class="work-img" src="./img/box2.jpg" alt="работа на смартфоне" width="370" height="294">
+                    <p class="work-text">Мобільні додатки</p>
                 </li>
-                <li>
+                <li class="work-item">
                     <img class="work-img" src="./img/box3.jpg" alt="работа на планшете" width="370" height="294">
+                    <p class="work-text">Дизайнерські рішення</p>
                 </li>   
             </ul>
             </div>
@@ -334,6 +337,14 @@
         </div>
     </div>
     </footer>
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button type="button" class="modal-close" data-modal-close><svg class="modal-icon" width="11" height="11">
+            <use href="./img/icons.svg#icon-Vector"></use>
+        </svg></button>
+    </div>
+</div>
+
     <script src="./js/modal.js"></script>   
 </body>
 </html>
